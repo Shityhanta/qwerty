@@ -1,0 +1,90 @@
+.healthandconditions h1 {
+    font-size: 40px;
+    padding-left: 20px;
+    color: #627254;
+}
+
+h2 {
+    color: #627254;
+    font: normal;
+    font-size: 30px;
+}
+
+.button{
+    display: block;
+    margin: 0 auto;
+    background-color: #627254;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.grids {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: stretch;
+    gap: 5%;
+    padding: 2%;
+}
+
+.fever {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    padding: 2%;
+}
+
+.diagnosis {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    padding: 2%;
+    text-align: center;
+}
+
+.symptoms {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    padding: 2%;
+}
+
+.doctor {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    padding: 2%;
+    text-align: center;
+}
+
+.causes {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    padding: 2%;
+}
+
+.risk {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+    padding: 2%;
+}
+
+.complication {
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+    padding: 2%;
+}
+
+.prevention {
+    background-color: #627254;
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.prev {
+    color: white;
+}
+
+.par {
+    color: white;
+}
