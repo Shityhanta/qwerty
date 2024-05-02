@@ -24,10 +24,10 @@
   
   .first {
     position: absolute; 
-    top: 2px; /* Adjust the top position */
-    left: 10px; /* Adjust the left position */
-    width: 65px; /* Set image width */
-    height: 65px; /* Set image height */
-    border-radius: 50%; /* Make the image circular */
+    top: 2px; 
+    left: 10px; 
+    width: 65px; 
+    height: 65px; 
+    border-radius: 50%; 
   }
   
