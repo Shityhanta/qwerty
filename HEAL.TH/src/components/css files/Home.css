@@ -8,7 +8,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    margin-top: -150px;
+    margin-top: 50px;
     z-index: 0;
     height: 620px;
 }
@@ -43,31 +43,73 @@
 }
 
 .health-conditions {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100vh;
 }
 
 .health-conditions h2 {
-    margin-top: 290px;
+    margin-top: 200px;
 }
 
-.card {
-    margin: 10px;
+.hospitals {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 200%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
 }
 
-.card-header, .card-p {
-    text-align: center;
+.hospitals-container {
+    width: 50%;
+    height: 20%;
 }
 
+.hospital-item {
+    position: absolute;
+    width: 100%;
+    object-fit: cover; /* Ensure images cover the entire container */
+    bottom: 0;
+    left: 0;
+}
+
+.hospital-item:nth-child(1) {
+    bottom: 50%;
+    transform: translateY(100%);
+  }
+  
+  .hospital-item:nth-child(2) {
+    bottom: 25%;
+    transform: translateY(75%);
+  }
+
+  .hospital-item:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+  
+  .hospital-item:nth-child(4) {
+    bottom: 25%;
+    transform: translateY(25%);
+  }
 
 @media (max-width: 480px) {
-    .landing-login h1 {
-        text-align: center;
-        font-size: 70px;
-        margin-top: 200px;
+    .texts {
+        margin-right: 15px;
+    }
+
+    .texts h1 {
+        font-size: 55px;
+    }
+
+    .texts hr {
+        width: 62%;
+    }
+
+    .texts p {
+        font-size: 15px; 
     }
 
     .landing-login hr {
@@ -77,5 +119,9 @@
     .landing-login button {
         margin-top: 15px;
         width: 250px;
+    }
+
+    .health-conditions {
+        margin-top: 60px;
     }
 }

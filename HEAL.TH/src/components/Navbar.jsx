@@ -21,19 +21,19 @@ const Navbar = () => {
         </div>
         <ul className={menuOpen ? "open" : ""}>
             <li>
-                <NavLink to='/health-conditions'>| Health Conditions |</NavLink>
+                <NavLink to='/health-conditions'>Health Conditions </NavLink>
             </li>
             <li>
-                <NavLink to='/self-diagnosis'>| Self Diagnosis |</NavLink>
+                <NavLink to='/self-diagnosis'>Self Diagnosis</NavLink>
             </li>
             <li>
-                <NavLink to='/hospitals'>| Hospitals |</NavLink>
+                <NavLink to='/hospitals'>Hospitals</NavLink>
             </li>
             <li>
-                <NavLink to='/faqs'>| FAQs |</NavLink>
+                <NavLink to='/faqs'>FAQs</NavLink>
             </li>
             <li>
-                <NavLink to='/about-us'>| Abous Us |</NavLink>
+                <NavLink to='/about-us'>Abous Us</NavLink>
             </li>
         </ul>
     </nav>
