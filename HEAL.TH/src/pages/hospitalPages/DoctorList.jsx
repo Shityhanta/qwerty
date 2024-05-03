@@ -1,6 +1,7 @@
 import React from 'react';
 import "../../css files/DoctorList.css";
-import dune_pic from '../../../assets/dune.jpg';
+import dune_pic from '../../assets/dune.jpg';
+import { Link } from 'react-router-dom';
 
 function DoctorList() {
   const doctors = [
@@ -82,7 +83,7 @@ function DoctorList() {
     
   ];
 
-  // Functionpn to chunk the array into groups of five
+  // Function to chunk the array into groups of five
   function chunkArray(array, chunkSize) {
     const chunkedArray = [];
     for (let i = 0; i < array.length; i += chunkSize) {
@@ -101,13 +102,15 @@ function DoctorList() {
         {chunkedDoctors.map((chunk, index) => (
           <div key={index}>
             {chunk.map((doctor, doctorIndex) => (
-              <div className='doctor' key={doctorIndex}>
-                <img src={doctor.picture} alt={doctor.name} />
-                <div className="doctor-details">
-                  <h2>{doctor.name}</h2>
-                  <p>{doctor.specialization}</p>
+              <Link to="/hospitals/doctors/doctor-page">
+                <div className='doctor' key={doctorIndex}>
+                  <img src={doctor.picture} alt={doctor.name} />
+                  <div className="doctor-details">
+                    <h2>{doctor.name}</h2>
+                    <p>{doctor.specialization}</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         ))}

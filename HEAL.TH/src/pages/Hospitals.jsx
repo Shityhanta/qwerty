@@ -2,9 +2,9 @@ import React from 'react';
 import { Button } from "@material-tailwind/react";
 import { Link } from 'react-router-dom'; // Import Link component
 import "../css files/Hospitals.css";
-import greenCity from '../../assets/green-city.jpg';
-import pmsh from '../../assets/pmsh.jpg';
-import rosario from '../../assets/rosario.jpg';
+import greenCity from '../assets/green-city.jpg';
+import pmsh from '../assets/pmsh.jpg';
+import rosario from '../assets/rosario.jpg';
 
 function Hospitals() {
   return (

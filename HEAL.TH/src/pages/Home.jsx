@@ -1,11 +1,11 @@
 import React from 'react';
 import "../css files/Home.css";
 import CardsHome from './CardsHome';
-import background from '../../assets/landing-page-bg.png';
-import greenCity from '../../assets/greencity.png';
-import pmsh from '../../assets/pmsh.jpg';
-import rosario from '../../assets/rosario.jpg';
-import diosdado from '../../assets/diosdado.jpg';
+import background from '../assets/landing-page-bg.png';
+import greenCity from '../assets/greencity.png';
+import pmsh from '../assets/pmsh.jpg';
+import rosario from '../assets/rosario.jpg';
+import diosdado from '../assets/diosdado.jpg';
 
 const Home = () => {
   return (

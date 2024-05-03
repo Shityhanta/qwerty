@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../css files/CardsHome.css";
 import { Link } from 'react-router-dom';
-import adhd_pic from '../../assets/adhd_pic.png';
-import next_icon from '../../assets/next.png';
-import prev_icon from '../../assets/prev.png';
+import adhd_pic from '../assets/adhd_pic.png';
+import next_icon from '../assets/next.png';
+import prev_icon from '../assets/prev.png';
 
 function CardsHome() {
     const [currentSlide, setCurrentSlide] = useState(0);
