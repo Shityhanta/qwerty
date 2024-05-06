@@ -3,7 +3,7 @@ import "../css files/About.css";
 import pic_1 from '../assets/image1.jpg';
 import pic_2 from '../assets/image2.jpg';
 import pic_3 from '../assets/image3.jpg';
-import pic_4 from '../assets//image4.jpg';
+import pic_4 from '../assets/image4.jpg';
 
 const About = () => {
   return (

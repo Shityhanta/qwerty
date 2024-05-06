@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+import profile from '../../../assets/image2.jpg';
 
 function DoctorPage() {
   return (
-    <div>
-      <h1>doctor page here</h1>
+    <div className='contain'>
+      <div className='left'>
+        <img src={profile} className='profile' alt=''></img>
+      </div>
     </div>
   )
 }
 
 export default DoctorPage
+

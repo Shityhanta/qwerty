@@ -7,6 +7,7 @@ import Hospitals from './pages/Hospitals'
 import FAQs from './pages/FAQs'
 import About from './pages/About'
 import Home from './pages/Home'
+import Login from './pages/Login'
 import DoctorList from './pages/hospitalPages/DoctorList'
 import EmerHotline from './pages/hospitalPages/EmerHotline'
 import Ambulance from './pages/hospitalPages/Ambulance'
@@ -27,6 +28,7 @@ function App() {
         <Route path='/hospitals/doctors/doctor-page' element={<DoctorPage />} />
         <Route path='/faqs' element={<FAQs />} />
         <Route path='/about-us' element={<About />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
     </div>
   )

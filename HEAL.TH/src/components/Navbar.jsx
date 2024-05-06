@@ -3,6 +3,7 @@ import "./Navbar.css"
 
 import {Link} from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
+import { MdOutlinePersonOutline } from "react-icons/md";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -34,6 +35,11 @@ const Navbar = () => {
             </li>
             <li>
                 <NavLink to='/about-us'>Abous Us</NavLink>
+            </li>
+            <li>
+                <NavLink to='/login'>
+                    <MdOutlinePersonOutline size={23}/>
+                </NavLink>
             </li>
         </ul>
     </nav>
