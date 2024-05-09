@@ -7,7 +7,7 @@ const HealthConditions = () => {
       <h1>Fever (types of fever)</h1>
       <hr />
 
-      <section className='grids'> 
+      <section className='parts'> 
         <form className='fever'>
           <h2>What is fever?</h2>
           <p>Fever is the temporary increase in the body's temperature in response to a disease or illness. 
@@ -47,7 +47,7 @@ const HealthConditions = () => {
 
         <form className='complication'>
           <h2>Complications</h2>
-          <p>nynyenyenynyenyenynyenyenynyenyenynyenyenynyenyenynyenyenynyenyenynyenyenynyenye</p>
+          <p>secret</p>
         </form>
       
         <form className='prevention'>

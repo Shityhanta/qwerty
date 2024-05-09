@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-.greenCityDoctors h1 {
+.greenCityDoctors h1, p {
     color: #333;
 }
 

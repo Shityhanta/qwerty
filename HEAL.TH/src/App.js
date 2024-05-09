@@ -1,15 +1,17 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import { Route, Routes } from 'react-router-dom'
-import HealthConditions from './components/pages/HealthConditions'
-import SelfDiagnosis from './components/pages/SelfDiagnosis'
-import Hospitals from './components/pages/Hospitals'
-import FAQs from './components/pages/FAQs'
-import About from './components/pages/About'
-import Home from './components/pages/Home'
-import DoctorList from './components/pages/hospitalPages/DoctorList'
-import EmerHotline from './components/pages/hospitalPages/EmerHotline'
-import Ambulance from './components/pages/hospitalPages/Ambulance'
+import HealthConditions from './pages/HealthConditions'
+import SelfDiagnosis from './pages/SelfDiagnosis'
+import Hospitals from './pages/Hospitals'
+import FAQs from './pages/FAQs'
+import About from './pages/About'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import DoctorList from './pages/hospitalPages/DoctorList'
+import EmerHotline from './pages/hospitalPages/EmerHotline'
+import Ambulance from './pages/hospitalPages/Ambulance'
+import DoctorPage from './pages/hospitalPages/doctorPage/DoctorPage'
 
 function App() {
   return (
@@ -23,8 +25,10 @@ function App() {
         <Route path='/hospitals/doctors' element={<DoctorList />} />
         <Route path='/hospitals/emergency-hotline' element={<EmerHotline />} />
         <Route path='/hospitals/ambulance' element={<Ambulance />} />
+        <Route path='/hospitals/doctors/doctor-page' element={<DoctorPage />} />
         <Route path='/faqs' element={<FAQs />} />
         <Route path='/about-us' element={<About />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
     </div>
   )
