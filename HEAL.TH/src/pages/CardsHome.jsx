@@ -89,8 +89,8 @@ function CardsHome() {
         </div>
       </div>
 
-      <button className="prev" onClick={handlePrevSlide}><img src={prev_icon} alt=""></img></button>
-      <button className="next" onClick={handleNextSlide}><img src={next_icon} alt=""></img></button>
+      <button id="prevButton" className="prev" onClick={handlePrevSlide}><img src={prev_icon} alt=""></img></button>
+      <button id="nextButton" className="next" onClick={handleNextSlide}><img src={next_icon} alt=""></img></button>
     </div>
   );
 }

@@ -16,13 +16,13 @@ const Home = () => {
           <img className='bg-landing' src={background} alt='landing page background' />
         </div>
 
-        <div className='texts'>
+        {/* <div className='texts'>
           <h1>HEAL.TH</h1>
           <hr />
           <p>Join us in revolutionizing the way individuals engage with healthcare. 
             Take control of your health with heal.th today.
           </p>
-        </div>
+        </div> */}
 
         <div className='health-conditions'>
           <h2 className='text-xl'>HEALTH CONDITIONS</h2>

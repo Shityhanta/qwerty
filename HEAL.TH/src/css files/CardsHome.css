@@ -40,8 +40,10 @@
   right: 0;
 }
 
-button {
+#nextButton {
   width: 50px !important;
 }
 
-
+#prevButton {
+  width: 50px !important;
+}
