@@ -9,13 +9,12 @@ import About from './pages/About'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import DoctorList from './pages/hospitalPages/DoctorList'
-import EmerHotline from './pages/hospitalPages/EmerHotline'
-import Ambulance from './pages/hospitalPages/Ambulance'
 import DoctorPage from './pages/hospitalPages/doctorPage/DoctorPage'
-import Home_page from './pages/home_page'
-import Switch_page from './pages/switch_page'
 import NoPageFound from './pages/NoPageFound'
-import Signup from './pages/Signup'
+import Home_page from './pages/MainPage'
+import Switch_page from './pages/switch_page'
+import Footer from './components/Footer'
+import ViewAccount from './pages/ViewAccount'
 
 function App() {
   return (
@@ -24,20 +23,18 @@ function App() {
       <Routes>
         <Route path='/' element={<Switch_page />} />
         <Route index element={<Home_page/>} />
-
         <Route path='/health-conditions' element={<HealthConditions />} />
         <Route path='/self-diagnosis' element={<SelfDiagnosis />} />
         <Route path='/hospitals' element={<Hospitals />} />
         <Route path='/hospitals/doctors' element={<DoctorList />} />
-        <Route path='/hospitals/emergency-hotline' element={<EmerHotline />} />
-        <Route path='/hospitals/ambulance' element={<Ambulance />} />
         <Route path='/hospitals/doctors/doctor-page' element={<DoctorPage />} />
         <Route path='/faqs' element={<FAQs />} />
         <Route path='/about-us' element={<About />} />
         <Route path='/login' element={<Login />} />
-        <Route path="/Signup" element = {<Signup/>} />
-        <Route path='*' element={<NoPageFound />} />
+        <Route path='/view-account' element={<ViewAccount/>}/>
+        <Route path='*' element={<NoPageFound/>} />
       </Routes>
+      <Footer/>
     </div>
   )
 }

@@ -1,88 +1,39 @@
-import React, { useState } from 'react';
-import profile from '../../../assets/image2.jpg';
-import "../../../css files/DoctorPage.css";
-import { Button } from "@material-tailwind/react";
-import { TbLogin2 } from "react-icons/tb";
+import React from 'react';
+import hospital_reception from "../../../assets/hospital_reception.jpg";
+import dr_grey from '../../../assets/dr_grey.jpg'
 
 function DoctorPage() {
-  const [sendSMSPU, setShowSendSMSPU] = useState(false);
-  const [sendEmailPU, setsendEmailPU] = useState(false);
-
-  const toggleSendSMSPU = () => {
-    setShowSendSMSPU(!sendSMSPU);
-  };
-
-  const togglesendEmailPU = () => {
-    setsendEmailPU(!sendEmailPU);
-  };
-
   return (
     <div>
-      <section id='parentContainer'>
-        <div id='leftChildCon'>
-          {/* contains img, doc name and specialization */}
-          <img id='profileImage' src={profile}></img>
-          <h1 id='doctor-name-docPage'>Dr. Kwak Kwak</h1>
-          <p id='specialization-docPage'>Specialization</p>
+      <section className='w-full h-screen relative'>
+        {/* Background image */}
+        <img src={hospital_reception} alt='reception of a hospital' className='absolute inset-0 filter blur-sm object-cover w-full h-full' />
+
+        {/* Clinic information */}
+        <div className='absolute w-9/12 max-w-xl bg-custom-color-2 text-white p-10 rounded-3xl flex items-center justify-center top-1/2 transform -translate-y-1/2 left-[55%] -translate-x-1/2'>
+          <div className='translate-x-2/2'>
+            <h1>Clinic Hours:</h1>
+            <p>Green City Medical Hospital <br></br>Monday - Tuesday: 10:00AM - 5:00PM</p>
+            <p>Pampanga Medical Specialist Hospital <br></br>Monday - Tuesday: 10:00AM - 5:00PM</p>
+            <p>No Clinic hours every Sunday</p>
+            <button className='bg-white text-black rounded-2xl w-32 h-8 mr-10 mt-10'>MESSAGE</button>
+            <button className='bg-white text-black rounded-2xl w-32 h-8'>EMAIL</button>
+          </div>
         </div>
-        <div id='rightChildCon'>
-          {/* contains clinic hours, contact info plus buttons */}
-          <p id='clinicHoursP-docPage'>Clinic Hours:</p>
-          <p id='contactP'>Contact Information</p>
-          <input id='input-docPage' type='text' value="09123456789"></input>
-          <input id='input-docPage' type='text' value="afgsdfhl@gmail.com"></input>
-
-          <Button onClick={toggleSendSMSPU} id='smsBtn-docPage' className={`bg-custom-color-2 text-white font-bold py-2 px-4 rounded ${sendSMSPU ? 'active' : ''}`}>
-            Send a SMS
-          </Button>
-          {sendSMSPU && (
-            <div className="smsPopUp-docPage">
-              {/* Popup content */}
-              <div className='smsContainer-docPage'>
-                <button id='closeButton' onClick={toggleSendSMSPU}><TbLogin2 size={25} /></button>
-                <h1 id='cfHeader-docPage'>Contact Form</h1>
-                <div className='appointmentDiv'>
-                  <p>Appointment Type</p>
-                  <input placeholder='Enter Appointment Type...'></input>
-                </div>
-                <input className='messageInput' placeholder='Message Here...'></input>
-                <div className='btnsContainer'>
-                  {/* <label>Additional Attachments <input type='file'></input></label> */}
-                  <button className='AttchBtn'>Additional Attachments</button>
-                  <button className='sendBtn'>Send</button>
-                </div>
-              </div>
-                
-            </div>
-          )}
-
-          <Button onClick={togglesendEmailPU} className={`bg-custom-color-2 text-white font-bold py-2 px-4 rounded emailBtn ${sendSMSPU ? 'active' : ''}`}>
-            Send an Email
-          </Button>
-            {sendEmailPU && (
-              <div className="emailPopUp-docPage">
-                {/* Popup content */}
-                <div className='emailContainer-docPage'>
-                  <button id='closeButton' onClick={togglesendEmailPU}><TbLogin2 size={25} /></button>
-                  <h1 id='cfHeader-docPage'>Contact Form</h1>
-                  <div className='appointmentDiv'>
-                    <p>Appointment Type</p>
-                    <input placeholder='Enter Appointment Type...'></input>
-                  </div>
-                  <input className='messageInput' placeholder='Message Here...'></input>
-                  <div className='btnsContainer'>
-                    {/* <label>Additional Attachments <input type='file'></input></label> */}
-                    <button className='AttchBtn'>Additional Attachments</button>
-                    <button className='sendBtn'>Send</button>
-                  </div>
-                </div>
-              </div>
-            )}
+        
+        {/* Doctor information */}
+        <div className='absolute w-75 bg-[#535353] text-white p-5 rounded-3xl flex items-center justify-center top-1/2 transform -translate-y-1/2 left-1/3 transform -translate-x-1/2'>
+          <div className='text-center'>
+            <img src={dr_grey} className='w-20 h-20 rounded-full object-cover mx-auto mb-4' alt='Dr. Merideth Grey' />
+            <h1 className='text-xl font-bold'>Dr. Merideth Grey</h1>
+            <p>Internal Medicine</p>
+            <p>(+639) 123-542-123</p>
+            <p>meridethgrey@gmail.com</p>
+          </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
 
-export default DoctorPage
-
+export default DoctorPage;
