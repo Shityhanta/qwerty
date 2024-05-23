@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Button } from "@material-tailwind/react";
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { TbLogin2 } from "react-icons/tb"; // Import yung icon from react 
 import greenCity from '../assets/green-city.jpg';
@@ -85,7 +84,7 @@ function Hospitals() {
   return (
     <div>
       {/* Green City */}
-      <section className='relative w-full h-screen overflow-hidden'>
+      <section className='relative w-full h-screen overflow-hidden' id="greenCitySection">
         <div className='absolute z-0 w-full h-[660px] top-0 blur-[3px] brightness-[0.8]'>
             <img src={greenCity} alt='green city' className='w-full h-full object-cover'/>
         </div>
@@ -99,7 +98,7 @@ function Hospitals() {
         </div>
         <div className="flex w-max gap-4 relative ml-[95px] mt-[250px]">
             <div className="ButtonWrapper">
-                <Link to="/hospitals/doctors">
+                <Link to="/hospitals/greencity-doctors">
                     <button className="bg-custom-color-2 text-white font-bold py-2 px-4 rounded block mt-6 w-[250px]">
                         See List of Doctors
                     </button>
@@ -146,7 +145,7 @@ function Hospitals() {
 
 
       {/* PMSH */}
-      <section className='relative w-full h-screen overflow-hidden'>
+      <section className='relative w-full h-screen overflow-hidden' id="pmshSection">
         <div className='absolute z-0 w-full h-[660px] top-0 blur-[3px] brightness-[0.8]'>
           <img src={pmsh} alt='PMSH' className='w-full h-full object-cover'/>
         </div>
@@ -159,7 +158,7 @@ function Hospitals() {
           </p>
         </div>
         <div className="relative ml-[1030px] mt-[350px]">
-          <Link to="/hospitals/doctors">
+          <Link to="/hospitals/pmsh-doctors">
             <button className="bg-custom-color-2 text-white font-bold py-2 px-4 rounded block mt-6 w-[250px]">
               See List of Doctors
             </button>
@@ -207,7 +206,7 @@ function Hospitals() {
       </section>
 
       {/* Section 3 Rosario */}
-      <section className='relative w-full h-screen overflow-hidden'>
+      <section className='relative w-full h-screen overflow-hidden' id="rosarioSection">
         <div className='absolute z-0 w-full h-[660px] top-0 blur-[3px] brightness-[0.8]'>
           <img src={rosario} alt='Rosario Hospital' className='w-full h-full object-cover'/>
         </div>
@@ -220,7 +219,7 @@ function Hospitals() {
           </p>
         </div>
         <div className="relative ml-[95px] mt-[280px]">
-          <Link to="/hospitals/doctors">
+          <Link to="/hospitals/rosario-doctors">
             <button className="bg-custom-color-2 text-white font-bold py-2 px-4 rounded block mt-6 w-[250px]">
               See List of Doctors
             </button>
@@ -267,7 +266,7 @@ function Hospitals() {
       </section>
 
       {/* Section 4 Diosdado */}
-      <section className='relative w-full h-screen overflow-hidden'>
+      <section className='relative w-full h-screen overflow-hidden' id="diosdadoSection">
         <div className='absolute z-0 w-full h-[660px] top-0 blur-[3px] brightness-[0.8]'>
           <img src={diosdado} alt='Diosdado Memorial Hospital' className='w-full h-full object-cover'/>
         </div>
@@ -280,7 +279,7 @@ function Hospitals() {
           </p>
         </div>
         <div className="relative ml-[1030px] mt-[350px]">
-          <Link to="/hospitals/doctors">
+          <Link to="/hospitals/diosdado-doctors">
             <button className="bg-custom-color-2 text-white font-bold py-2 px-4 rounded block mt-6 w-[250px]">
               See List of Doctors
             </button>
@@ -325,9 +324,6 @@ function Hospitals() {
           )}
         </div>
       </section>
-
-
-
     </div>
   );
 }

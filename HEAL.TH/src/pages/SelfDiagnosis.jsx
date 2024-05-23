@@ -2,84 +2,77 @@ import React from "react";
 
 function SelfDiagnosis() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-blue-500">
-      <form className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-        <div className="relative z-0 w-full mb-5 group">
-          <input
-            type="name"
-            name="floating_name"
-            id="floating_name"
-            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-            placeholder=" "
-            required
-          />
-          <label
-            htmlFor="floating_name"
-            className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+    <div className="flex flex-col items-center justify-center min-h-screen bg-blue-500">
+      <div className="text-center mb-8 ">
+        <h1 className="text-3xl font-bold mb-2">SELF DIAGNOSIS</h1>
+        <p className="text-black-700">
+          In self diagnosis, please be sure that the data you provide us is accurate, in order for us to give you proper diagnosis and instructions. Thank you!
+        </p>
+      </div>
+      <div className="bg-custom-color p-8 rounded-lg shadow-lg w-full max-w-4xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <form className="bg-white p-8 rounded-lg shadow-lg">
+            <div className="mb-5">
+              <label htmlFor="floating_name" className="block text-gray-700 font-semibold mb-1">Full name</label>
+              <input
+                type="text"
+                name="floating_name"
+                id="floating_name"
+                className="block w-full py-2.5 px-4 text-sm text-gray-900 bg-transparent border-b-2 border-gray-300 focus:border-blue-600 focus:outline-none"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <label htmlFor="floating_age" className="block text-gray-700 font-semibold mb-1">Age</label>
+              <input
+                type="text"
+                name="floating_age"
+                id="floating_age"
+                className="block w-full py-2.5 px-4 text-sm text-gray-900 bg-transparent border-b-2 border-gray-300 focus:border-blue-600 focus:outline-none"
+                placeholder="Enter your age"
+                required
+              />
+            </div>
+          </form>
+
+          <form className="bg-white p-8 rounded-lg shadow-lg">
+            <div className="mb-5">
+              <label htmlFor="floating_sex" className="block text-gray-700 font-semibold mb-1">Sex</label>
+              <input
+                type="text"
+                name="floating_sex"
+                id="floating_sex"
+                className="block w-full py-2.5 px-4 text-sm text-gray-900 bg-transparent border-b-2 border-gray-300 focus:border-blue-600 focus:outline-none"
+                placeholder="Enter your sex"
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <label htmlFor="floating_history" className="block text-gray-700 font-semibold mb-1">History</label>
+              <input
+                type="text"
+                name="floating_history"
+                id="floating_history"
+                className="block w-full py-2.5 px-4 text-sm text-gray-900 bg-transparent border-b-2 border-gray-300 focus:border-blue-600 focus:outline-none"
+                placeholder="Enter your medical history"
+                required
+              />
+            </div>
+          </form>
+        </div>
+
+        <div className="text-center">
+          <button
+            type="submit"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-semibold rounded-lg text-sm px-5 py-2.5"
           >
-            Full name
-          </label>
+            Continue
+          </button>
         </div>
-        <div className="relative z-0 w-full mb-5 group">
-          <input
-            type="history"
-            name="floating_history"
-            id="floating"
-            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-            placeholder=" "
-            required
-          />
-          <label
-            htmlFor="floating_history"
-            className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-          >
-            History
-          </label>
-        </div>
-        <div className="grid md:grid-cols-2 md:gap-6">
-          <div className="relative z-0 w-full mb-5 group">
-            <input
-              type="text"
-              name="floating_first_name"
-              id="floating_first_name"
-              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-              placeholder=" "
-              required
-            />
-            <label
-              htmlFor="floating_first_name"
-              className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >
-              Age
-            </label>
-          </div>
-          <div className="relative z-0 w-full mb-5 group">
-            <input
-              type="text"
-              name="floating_last_name"
-              id="floating_last_name"
-              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-              placeholder=" "
-              required
-            />
-            <label
-              htmlFor="floating_last_name"
-              className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-            >
-              Sex
-            </label>
-          </div>
-        </div>
-        <button
-          type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
-        >
-          Continue
-        </button>
-      </form>
+      </div>
     </div>
   );
 }
 
 export default SelfDiagnosis;
-  

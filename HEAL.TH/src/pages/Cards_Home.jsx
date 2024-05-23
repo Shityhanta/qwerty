@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 import CardsHome from './CardsHome';
 
 const Cards_Home = () => {
     return (
-        <div>
-            <div className='health-conditions'>
-          <h2 className='text-xl'>HEALTH CONDITIONS</h2>
-          <CardsHome/>
-        </div>  
+        <div className="flex flex-col items-center">
+            <h2 className="text-xl mt-12">HEALTH CONDITIONS</h2> {/* Adjusted margin */}
+            <div className="mt-[-20px]"> {/* Added negative margin to the container */}
+                <CardsHome />
+            </div>
         </div>
     );
 }

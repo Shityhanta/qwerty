@@ -7,13 +7,16 @@ import Hospitals from './pages/Hospitals'
 import FAQs from './pages/FAQs'
 import About from './pages/About'
 import Login from './pages/Login'
-import DoctorList from './pages/hospitalPages/DoctorList'
-import DoctorPage from './pages/hospitalPages/doctorPage/DoctorPage'
+import GCDoctors from './pages/hospitalPages/GCDoctors'
 import NoPageFound from './pages/NoPageFound'
 import Home_page from './pages/MainPage'
 import Switch_page from './pages/switch_page'
 import Footer from './components/Footer'
 import ViewAccount from './pages/ViewAccount'
+import PMSHDoctors from './pages/hospitalPages/PMSHDoctors'
+import RosarioDoctors from './pages/hospitalPages/RosarioDoctors'
+import DiosdadoDoctors from './pages/hospitalPages/DiosdadoDoctors'
+import Signup from './pages/Signup'
 
 function App() {
   return (
@@ -25,11 +28,14 @@ function App() {
         <Route path='/health-conditions' element={<HealthConditions />} />
         <Route path='/self-diagnosis' element={<SelfDiagnosis />} />
         <Route path='/hospitals' element={<Hospitals />} />
-        <Route path='/hospitals/doctors' element={<DoctorList />} />
-        <Route path='/hospitals/doctors/doctor-page' element={<DoctorPage />} />
+        <Route path='/hospitals/greencity-doctors' element={<GCDoctors />} />
+        <Route path='/hospitals/pmsh-doctors' element={<PMSHDoctors />} />
+        <Route path='/hospitals/rosario-doctors' element={<RosarioDoctors />} />
+        <Route path='/hospitals/diosdado-doctors' element={<DiosdadoDoctors />} />
         <Route path='/faqs' element={<FAQs />} />
         <Route path='/about-us' element={<About />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} ></Route>
         <Route path='/view-account' element={<ViewAccount/>}/>
         <Route path='*' element={<NoPageFound/>} />
       </Routes>

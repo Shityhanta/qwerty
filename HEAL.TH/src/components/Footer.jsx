@@ -73,7 +73,7 @@ function Footer() {
                 </div>
             </div>
         </div>
-        <div className="py-6 text-sm text-center dark:text-gray-600">© 2024 HEAL.TH All rights reserved.</div>
+        <div className="py-6 text-sm text-center dark:text-black-600">© 2024 HEAL.TH All rights reserved.</div>
     </footer>
   );
 }

@@ -11,7 +11,7 @@ function CardsHome() {
         {
             title: "Fever",
             description: "brief description test test test test test test test test test",
-            section: "fever"
+            section: "Fever"
         },
         {
             title: "Asthma",
