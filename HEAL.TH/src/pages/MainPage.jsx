@@ -1,13 +1,13 @@
 import React from 'react';
-import Home from './Home';
 import Cards_Home from './Cards_Home';
 import GoToSelfD from './GoToSelfD';
 import Carousel from './Carousel';
+import Hero from './Hero';
 
 function switch_page() {
   return (
     <div>
-      <Home/>
+      <Hero/>
       <Cards_Home/>
       <GoToSelfD />
       <Carousel/>
