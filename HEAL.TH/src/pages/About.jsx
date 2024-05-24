@@ -1,9 +1,5 @@
-import React from 'react'
-// import "../css files/About.css";
-// import pic_1 from '../assets/image1.jpg';
-// import pic_2 from '../assets/image2.jpg';
-// import pic_3 from '../assets/image3.jpg';
-// import pic_4 from '../assets/image4.jpg';
+import React from 'react';
+import JP from '../assets/JP.jpg';
 
 const About = () => {
   return (
@@ -47,8 +43,8 @@ const About = () => {
                             <p className="font-medium text-xl leading-5 text-gray-800 dark:text-white mt-4">Mark Ace</p>
                         </div>
                         <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                            <img className="md:block hidden" src="https://i.ibb.co/7nSJPXQ/Rectangle-121.png" alt="Elijah featured image" />
-                            <img className="md:hidden block" src="https://i.ibb.co/ThZBWxH/Rectangle-121.png" alt="Elijah featured image" />
+                            <img className="md:block hidden" src={JP} alt="JP featured image" />
+                            <img className="md:hidden block" src={JP} alt="JP featured image" />
                             <p className="font-medium text-xl leading-5 text-gray-800 dark:text-white mt-4">John Paul</p>
                         </div>
                         <div className="p-4 pb-6 flex justify-center flex-col items-center">
