@@ -14,16 +14,16 @@ function FAQs() {
   };
 
   return (
-    <div className='h-screen w-full flex'>
-      <div>
+    <div className='min-h-screen w-full flex flex-col md:flex-row'>
+      <div className='w-full md:w-1/2'>
         <img src={picture} className='w-full'></img>
       </div>
-      <div className='w-1/2 mx-8 mt-10'>
-        <Accordion open={open === 1} className="mb-9 rounded-lg border border-blue-gray-100 px-4">
+      <div className='w-full md:w-1/2 mx-4 md:mx-8 mt-6 md:mt-10'>
+        <Accordion open={open === 1} className="mb-4 md:mb-9 rounded-lg border border-blue-gray-100 px-4">
           <AccordionHeader
             onClick={() => handleOpen(1)}
-            className={`border-b-0 transition-colors ${
-              open === 1 ? "text-blue-500 hover:!text-blue-700" : ""
+            className={`cursor-pointer border-b-0 transition-colors ${
+              open === 1 ? "text-blue-500 hover:!text-blue-700" : "hover:bg-blue-100"
             }`}
           >
             What is Self-Diagnosis?
@@ -35,11 +35,11 @@ function FAQs() {
           </AccordionBody>
         </Accordion>
 
-        <Accordion open={open === 2} className="mb-9 rounded-lg border border-blue-gray-100 px-4">
+        <Accordion open={open === 2} className="mb-4 md:mb-9 rounded-lg border border-blue-gray-100 px-4">
           <AccordionHeader
             onClick={() => handleOpen(2)}
-            className={`border-b-0 transition-colors ${
-              open === 2 ? "text-blue-500 hover:!text-blue-700" : ""
+            className={`cursor-pointer border-b-0 transition-colors ${
+              open === 2 ? "text-blue-500 hover:!text-blue-700" : "hover:bg-blue-100"
             }`}
           >
             How Do I Use Self-Diagnosis?
@@ -51,11 +51,11 @@ function FAQs() {
           </AccordionBody>
         </Accordion>
 
-        <Accordion open={open === 3} className="mb-9 rounded-lg border border-blue-gray-100 px-4">
+        <Accordion open={open === 3} className="mb-4 md:mb-9 rounded-lg border border-blue-gray-100 px-4">
           <AccordionHeader
             onClick={() => handleOpen(3)}
-            className={`border-b-0 transition-colors ${
-              open === 3 ? "text-blue-500 hover:!text-blue-700" : ""
+            className={`cursor-pointer border-b-0 transition-colors ${
+              open === 3 ? "text-blue-500 hover:!text-blue-700" : "hover:bg-blue-100"
             }`}
           >
             Is Your Self-Diagnosis Feature Accurate?
@@ -68,11 +68,11 @@ function FAQs() {
           </AccordionBody>
         </Accordion>
 
-        <Accordion open={open === 4} className="mb-9 rounded-lg border border-blue-gray-100 px-4">
+        <Accordion open={open === 4} className="mb-4 md:mb-9 rounded-lg border border-blue-gray-100 px-4">
           <AccordionHeader
             onClick={() => handleOpen(4)}
-            className={`border-b-0 transition-colors ${
-              open === 4 ? "text-blue-500 hover:!text-blue-700" : ""
+            className={`cursor-pointer border-b-0 transition-colors ${
+              open === 4 ? "text-blue-500 hover:!text-blue-700" : "hover:bg-blue-100"
             }`}
           >
             Can I Rely Solely on Self-Diagnosis?
@@ -83,11 +83,11 @@ function FAQs() {
           </AccordionBody>
         </Accordion>
 
-        <Accordion open={open === 5} className="mb-9 rounded-lg border border-blue-gray-100 px-4">
+        <Accordion open={open === 5} className="mb-4 md:mb-9 rounded-lg border border-blue-gray-100 px-4">
           <AccordionHeader
             onClick={() => handleOpen(5)}
-            className={`border-b-0 transition-colors ${
-              open === 5 ? "text-blue-500 hover:!text-blue-700" : ""
+            className={`cursor-pointer border-b-0 transition-colors ${
+              open === 5 ? "text-blue-500 hover:!text-blue-700" : "hover:bg-blue-100"
             }`}
           >
             How Do I Know If the Self-Diagnosis Is Correct?
@@ -99,11 +99,11 @@ function FAQs() {
           </AccordionBody>
         </Accordion>
 
-        <Accordion open={open === 6} className="mb-9 rounded-lg border border-blue-gray-100 px-4">
+        <Accordion open={open === 6} className="mb-4 md:mb-9 rounded-lg border border-blue-gray-100 px-4">
           <AccordionHeader
             onClick={() => handleOpen(6)}
-            className={`border-b-0 transition-colors ${
-              open === 6 ? "text-blue-500 hover:!text-blue-700" : ""
+            className={`cursor-pointer border-b-0 transition-colors ${
+              open === 6 ? "text-blue-500 hover:!text-blue-700" : "hover:bg-blue-100"
             }`}
           >
             What Should I Do After Receiving a Self-Diagnosis?
@@ -114,11 +114,11 @@ function FAQs() {
           </AccordionBody>
         </Accordion>
 
-        <Accordion open={open === 7} className="mb-9 rounded-lg border border-blue-gray-100 px-4">
+        <Accordion open={open === 7} className="mb-4 md:mb-9 rounded-lg border border-blue-gray-100 px-4">
           <AccordionHeader
             onClick={() => handleOpen(7)}
-            className={`border-b-0 transition-colors ${
-              open === 7 ? "text-blue-500 hover:!text-blue-700" : ""
+            className={`cursor-pointer border-b-0 transition-colors ${
+              open === 7 ? "text-blue-500 hover:!text-blue-700" : "hover:bg-blue-100"
             }`}
           >
             Is My Personal Information Safe?
@@ -132,8 +132,8 @@ function FAQs() {
         <Accordion open={open === 8} className="rounded-lg border border-blue-gray-100 px-4">
           <AccordionHeader
             onClick={() => handleOpen(8)}
-            className={`border-b-0 transition-colors ${
-              open === 8 ? "text-blue-500 hover:!text-blue-700" : ""
+            className={`cursor-pointer border-b-0 transition-colors ${
+              open === 8 ? "text-blue-500 hover:!text-blue-700" : "hover:bg-blue-100"
             }`}
           >
             Can I Use Self-Diagnosis for Emergency Situations?
