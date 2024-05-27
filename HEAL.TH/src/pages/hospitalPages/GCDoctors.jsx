@@ -7,6 +7,8 @@ Modal.setAppElement('#root'); // Important for accessibility
 
 function GCDoctors() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [messagePopupIsOpen, setMessagePopupIsOpen] = useState(false);
+  const [emailPopupIsOpen, setEmailPopupIsOpen] = useState(false);
   const [selectedDoctor, setSelectedDoctor] = useState(null);
   const [nameWidth, setNameWidth] = useState(0); // Define nameWidth and setNameWidth
 
@@ -20,6 +22,22 @@ function GCDoctors() {
   const closeModal = () => {
     setModalIsOpen(false);
     setSelectedDoctor(null);
+  };
+
+  const openMessagePopup = () => {
+    setMessagePopupIsOpen(true);
+  };
+
+  const closeMessagePopup = () => {
+    setMessagePopupIsOpen(false);
+  };
+
+  const openEmailPopup = () => {
+    setEmailPopupIsOpen(true);
+  };
+
+  const closeEmailPopup = () => {
+    setEmailPopupIsOpen(false);
   };
 
   useEffect(() => {
@@ -85,7 +103,7 @@ function GCDoctors() {
       picture: no_pic,
       number: "099999999999",
       email: "johndoe@gmail.com",
-      sched1: "Monday and Thursday: 4PM to 7Pm",
+      sched1: "Monday and Thursday: 4PM to 7PM",
       clinic: "Green City Medical Center",
       room: "19"
     },
@@ -193,14 +211,14 @@ function GCDoctors() {
                   <p>{selectedDoctor.clinic}</p>
                   <p>{selectedDoctor.sched1}</p>
                   <p>Room: {selectedDoctor.room}</p>
-                  <button className='bg-white text-black rounded-2xl w-32 h-8 mr-10 mt-10'>MESSAGE</button>
-                  <button className='bg-white text-black rounded-2xl w-32 h-8'>EMAIL</button>
+                  <button onClick={openMessagePopup} className='bg-white text-black rounded-2xl w-32 h-8 mr-10 mt-10'>MESSAGE</button>
+                  <button onClick={openEmailPopup} className='bg-white text-black rounded-2xl w-32 h-8'>EMAIL</button>
                 </div>
               </div>
 
               <div className='absolute w-75 bg-[#535353] text-white p-5 rounded-3xl flex items-center justify-center top-1/2 transform -translate-y-1/2 left-1/3 transform -translate-x-1/2'>
                 <div className='text-center'>
-                  <img ref={nameRef} src={selectedDoctor.picture} className='w-20 h-20 rounded-full object-cover mx-auto mb-4' alt='Dr. Merideth Grey' />
+                  <img ref={nameRef} src={selectedDoctor.picture} className='w-20 h-20 rounded-full object-cover mx-auto mb-4' alt={selectedDoctor.name} />
                   <h1 className='text-xl font-bold'>{selectedDoctor.name}</h1>
                   <p>{selectedDoctor.specialization}</p>
                   <p>{selectedDoctor.number}</p>
@@ -211,6 +229,38 @@ function GCDoctors() {
             <button onClick={closeModal} className='absolute top-4 right-4 text-white bg-red-500 rounded-full p-2'>X</button>
           </div>
         )}
+      </Modal>
+
+      <Modal
+        isOpen={messagePopupIsOpen}
+        onRequestClose={closeMessagePopup}
+        contentLabel="Message Doctor"
+        className="modal w-full h-full flex items-center justify-center"
+        overlayClassName="overlay fixed inset-0 bg-black bg-opacity-75"
+      >
+        <div className='relative w-1/3 bg-white p-5 rounded-lg'>
+          <h2 className='text-xl font-bold mb-4'>Send a Message to {selectedDoctor?.name}</h2>
+          <input type='text' className='w-full p-2 mb-4 border rounded' placeholder='Appointment Type' />
+          <textarea className='w-full h-32 p-2 mb-4 border rounded' placeholder='Type your message here...'></textarea>
+          <button className='bg-blue-500 text-white rounded-2xl w-32 h-8 mr-4' onClick={closeMessagePopup}>SEND</button>
+          <button className='bg-gray-500 text-white rounded-2xl w-32 h-8' onClick={closeMessagePopup}>CANCEL</button>
+        </div>
+      </Modal>
+
+      <Modal
+        isOpen={emailPopupIsOpen}
+        onRequestClose={closeEmailPopup}
+        contentLabel="Email Doctor"
+        className="modal w-full h-full flex items-center justify-center"
+        overlayClassName="overlay fixed inset-0 bg-black bg-opacity-75"
+      >
+        <div className='relative w-1/3 bg-white p-5 rounded-lg'>
+          <h2 className='text-xl font-bold mb-4'>Send an Email to {selectedDoctor?.name}</h2>
+          <input type='text' className='w-full p-2 mb-4 border rounded' placeholder='Subject' />
+          <textarea className='w-full h-32 p-2 mb-4 border rounded' placeholder='Type your email here...'></textarea>
+          <button className='bg-blue-500 text-white rounded-2xl w-32 h-8 mr-4' onClick={closeEmailPopup}>SEND</button>
+          <button className='bg-gray-500 text-white rounded-2xl w-32 h-8' onClick={closeEmailPopup}>CANCEL</button>
+        </div>
       </Modal>
     </div>
   );

@@ -11,6 +11,7 @@ module.exports = {
         'red': '#ff0000',
         'brown' : "#493F3E",
         'yellow' : "#FFFF00",
+        
       },
       height: {
         '200px': '200px',
@@ -46,6 +47,7 @@ module.exports = {
         '15px' : '15px',
         '10px' : '10px',
         '50px' : '50px',
+        '70px' : '70px',
         '100px' : '100px',
         '120px' : '120px',
       },
